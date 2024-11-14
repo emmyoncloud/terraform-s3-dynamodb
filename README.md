@@ -30,8 +30,8 @@ Follow these instructions to get a copy of the project up and running on your lo
    ```sh
    AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID
    AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
-   Default region name [None]: us-east-1   // Select your desired Region
-   Default output format [None]: json  // Select your desired Output Formst
+   Default region name [None]: us-east-1   //Select your desired Region
+   Default output format [None]: json  //Select your desired Output Formst
    ```
 
 7. **Clone the repository:**
@@ -68,7 +68,7 @@ Follow these instructions to get a copy of the project up and running on your lo
    terraform apply -var-file=“terraform.tfvars"
    ```
 
-12. **Remove the "terraform.tfstate" file your working directory:**
+12. **Remove the "terraform.tfstate" file your local working directory:**
     
    ```sh
    rm -rf terraform.tfstate
