@@ -81,7 +81,6 @@ Follow these instructions to get a copy of the project up and running on your lo
    terraform state show aws_s3_bucket.akor_s3
    ``` 
 
-15. **Create a pull request on GitHub to merge your changes.**
 
 ## Contributing
 
