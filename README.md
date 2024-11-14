@@ -1,8 +1,6 @@
-# terraform-s3-dynamodb
-
 # Using Terraform (IaC) for S3 bucket and DynamoDB table provisioning.
 
-S3 will be used to store the “terraform state file” and DynamoDB table will be used to implement the “state locking” and consistent checks.
+S3 bucket will be used to store the “terraform state file” and DynamoDB table will be used to implement the “state locking” and consistent checks.
 
 ## Getting Started
 
@@ -30,10 +28,10 @@ Follow these instructions to get a copy of the project up and running on your lo
 6. **Enter your AWS credentials:**
 
    ```sh
-   AWS Access Key ID [None]: AKORA6JQ123PB45EFGHI89
-   AWS Secret Access Key [None]: Z34i56789Yh-2PXyZbcd+bDdEhakORmv3456FI4s3H
-   Default region name [None]: us-east-1
-   Default output format [None]: json
+   AWS Access Key ID [None]: YOUR_ACCESS_KEY_ID
+   AWS Secret Access Key [None]: YOUR_SECRET_ACCESS_KEY
+   Default region name [None]: us-east-1   // Select your desired Region
+   Default output format [None]: json  // Select your desired Output Formst
    ```
 
 7. **Clone the repository:**
@@ -48,15 +46,48 @@ Follow these instructions to get a copy of the project up and running on your lo
    cd terraform-s3-dynamodb
    ```
 
-9. **The Objects and Values used for this project:**
-          Object       |        Value
-—---------—————————————+———————————--------———————
-	Bucket			         |   emmyoncloud-tfstate-bucket
-	Key				           |   development/terraform.tfstate
-	Region			         |   us-east-1
-	DynamoDB Table	     |   state-locking
+9. **Initialize Terraform in your directory:**
+       
+   ```sh
+   terraform init
+   ```
+
+10. **Create an execution plan for your Terraform configuration:**
+      
+   ```sh
+   terraform plan
+   ```
+
+11. **Apply the changes required to reach the desired state of the configuration:**
+
+   ```sh
+   terraform apply
+   ```
+
+   ```sh
+   terraform apply -var-file=“terraform.tfvars"
+   ```
+
+12. **Remove the "terraform.tfstate" file your working directory:**
+    
+   ```sh
+   rm -rf terraform.tfstate
+   ```
+
+13. **To display detailed information about the resource in the Terraform state:**
+    **terraform state <subcommand>  (options)  (arguments)**
+    
+   ```sh
+   terraform state show aws_s3_bucket.akor_s3
+   ``` 
+
+15. **Create a pull request on GitHub to merge your changes.**
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests. Contributions are welcome!
 
 
+## *Note
 
-
-
+The secrets and keys used in this project are samples. Please ensure you use the configurations and commands to your specific AWS environment and requirements.
