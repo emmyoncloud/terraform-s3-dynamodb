@@ -1,0 +1,7 @@
+ami_value = "ami-0c55b159cbfafe1f0"
+instance_type_value = "t2.micro"
+subnet_id_value = "subnet-0bb1c79de3EXAMPLE"
+name_value = "Emmanuel"
+bucket_value = "emmyoncloud-tfstate-bucket"
+dynamo_name = "state-locking"
+billing_mode_value = "PAY_PER_REQUEST"
